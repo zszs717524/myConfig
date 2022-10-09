@@ -1,6 +1,7 @@
 set nocompatible 
 syntax enable
 "syntax off
+filetype on
 filetype plugin on
 filetype indent on
 set autoindent
@@ -8,6 +9,7 @@ set autoindent
 "colorscheme darkblue
 colorscheme desert
 
+set ruler
 set nu
 set showcmd
 set backspace=eol,start,indent
@@ -29,6 +31,10 @@ set history=400
 set encoding=utf8
 set fileencodings=utf8,gb2312,gb18030,ucs-bom,latin1
 set visualbell
+set clipboard=unnamed
+set wrap
+set linebreak
+
 if &term == "xterm"
     set t_Co=8
     set t_Sb=^[[4%dm
@@ -39,7 +45,7 @@ set laststatus=2
 highlight StatusLine cterm=bold ctermfg=white ctermbg=black
 
 "set statusline=%F%m%r%h%w\[POS=%l,%v][%p%%]\[%{&fileformat}]\[%{&encoding}]\[%{strftime(\"%Y-%m-%d\ %H:%M:%S\")}] 
-set statusline=%F%m%r%h%w\ \[POS=%l,%v]\[%{&encoding}]\[%{strftime(\"%H:%M:%S\")}] 
+set statusline=%F%m%r%h%w\ \[POS=%l,%v]\[%{&encoding}]
 "set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\ 
 
 nmap <F7> :TlistToggle <CR>
